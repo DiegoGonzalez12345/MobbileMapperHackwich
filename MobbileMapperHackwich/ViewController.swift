@@ -20,8 +20,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-       locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
+       locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
     }
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
@@ -44,7 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = "Parks"
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
+        request.region = MKCoordinateRegion(center: currentLocation!.coordinate, span: mapView.region.span)
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
         guard let response = response else { return }

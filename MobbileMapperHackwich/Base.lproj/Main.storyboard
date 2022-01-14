@@ -32,12 +32,12 @@
                     <navigationItem key="navigationItem" id="JMO-sa-e9j">
                         <barButtonItem key="leftBarButtonItem" title="Zoom" id="VGC-yU-yzx">
                             <connections>
-                                <action selector="whenSearchButtonPressed:" destination="BYZ-38-t0r" id="MV3-5G-SMD"/>
+                                <action selector="whenZoomButtonPressed:" destination="BYZ-38-t0r" id="CE0-H5-6GC"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="8jQ-DR-DHq">
                             <connections>
-                                <action selector="whenZoomButtonPressed:" destination="BYZ-38-t0r" id="MTG-GE-M5Z"/>
+                                <action selector="whenSearchButtonPressed:" destination="BYZ-38-t0r" id="dt3-1Q-fsZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
